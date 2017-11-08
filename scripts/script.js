@@ -64,8 +64,8 @@ function initMap() {
 	map.mapTypes.set('Trabia', trabiaMapType);
 	map.setMapTypeId('Trabia');
 
-	google.maps.event.addListener(map, 'click', function( event ){
-  	console.log('[' + event.latLng.lng() + ", " + event.latLng.lat() + '],'); 
+	google.maps.event.addListener(map, 'click', function(e){
+  	console.log('[' + e.latLng.lng() + ", " + e.latLng.lat() + '],'); 
 	});
 
 	map.data.setStyle(function(feature) {
@@ -111,7 +111,7 @@ function initMap() {
           visible: visible,
         }
         break;
-      case 'mission': 
+      case 'event': 
         var icon = feature.getProperty('icon')
         var fillColor = feature.getProperty('fillColor')
         var starFill = feature.getProperty('starFill')
@@ -141,15 +141,15 @@ function initMap() {
 
 	map.data.addGeoJson(cities);
   map.data.addGeoJson(characters);
-  map.data.addGeoJson(missions);
+  map.data.addGeoJson(events);
   map.data.addGeoJson(sectors);
 
-	map.data.addListener('click', function(event) {
-    let type = event.feature.getProperty('featureType')
+	map.data.addListener('click', function(e) {
+    let type = e.feature.getProperty('featureType')
     if(type == "city" || type == "event" || type == "sector") {
-      infoTitle.innerHTML = event.feature.getProperty('name')
-      infoImage.src = event.feature.getProperty('image')
-      infoDescription.innerHTML = event.feature.getProperty('description')
+      infoTitle.innerHTML = e.feature.getProperty('name')
+      infoImage.src = e.feature.getProperty('image')
+      infoDescription.innerHTML = e.feature.getProperty('description')
     }
   });
 
