@@ -57,7 +57,7 @@ var events = {
         image: "img/events/event.png",
         description: "I tre più grandi criminali latitanti di <span style='color: gold'>Villista</span> sono stati ritrovati morti davanti al palazzo di giustizia cittadino. Per quento la chiesa di <span style='color: gold'>Abadar</span> e in generale tutta la cittadina ne sia contenta, <span style='color: gold'>Suleli</span> vuole vederci chiaro.",
         icon: "legal",
-        fillColor: "FFFFFF",
+        fillColor: "63BD6E",
         starFill: "CEC825",
       },
       geometry: {
@@ -127,6 +127,38 @@ var events = {
       geometry: {
         type: 'Point', 
         coordinates: [-36.298828125, 79.15480994354373]
+      }
+    },
+    {
+      type: 'Feature',
+      properties: {
+        featureType: "event",
+        name: "Il concerto di Sithar Killeplith",
+        image: "img/events/sithar.png",
+        description: "<span style='color: gold'>Sithar Killeplith</span> ha annunciato di volere organizzare un concerto a Lini dedicato all'onore di tutti i caduti nella guerra avvenuta alla torre di Tinuben il mese scorso. L'evento è previsto tra 30 giorni a partire da oggi.",
+        icon: "caution",
+        fillColor: "62A8BD",
+        starFill: "CEC825",
+      },
+      geometry: {
+        type: 'Point', 
+        coordinates: [-40.6494140625, 79.02171239525758]
+      }
+    },
+    {
+      type: 'Feature',
+      properties: {
+        featureType: "event",
+        name: "Un secondo sole e i cultisti dell'eclissi",
+        image: "img/events/event.png",
+        description: "A <span style='color: gold'>Villista</span>, e nella sua periferia, alcune persone sono impazzite e hanno iniziato a delirare osannando l'avvento di un <span style='color: gold'>Secondo Sole</span> che brucerà Golarion. Alcuni di queste persone sono scomparse nel nulla e non si sono mai più riviste, altre che si credevano ormai irremidiabilmente insane sono rinsavite e affermano di essere state salvate dai <span style='color: gold'>Cultisti dell'Eclisse</span>",
+        icon: "caution",
+        fillColor: "FF0000",
+        starFill: "CEC825",
+      },
+      geometry: {
+        type: 'Point', 
+        coordinates: [-31.201171875, 79.5446087817067],
       }
     },
   ]
